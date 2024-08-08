@@ -25,8 +25,8 @@ def format_board(board):
 
 def play_move(board, player):
     print(f'{player} to play:')
-    row = int(input()) - 1
-    col = int(input()) - 1
+    row = int(input('Choose a row. ')) - 1
+    col = int(input('Choose a column. ')) - 1
     board[row][col] = player
     print(format_board(board))
 
@@ -56,6 +56,16 @@ def play_game(board_size, player1, player2):
 
     print_draw()
         
-    
+board_s = int(input('What board size do you want? '))
+p1_char = input(f'What letter is player 1? ')
+while len(p1_char) > 1:
+    p1_char = input('Please enter one character only. ')
+while p1_char.isnumeric == True:
+    p1_char = input('Please enter characters only. ')
+p2_char = input(f'What letter is player 2? ')
+while len(p2_char) > 1:
+    p2_char = input('Please enter one character only. ')
+while p2_char.isnumeric == True:
+    p2_char = input('Please enter characters only. ')
 
-play_game(3, 'X', 'O')
+play_game(board_s, p1_char, p2_char)
