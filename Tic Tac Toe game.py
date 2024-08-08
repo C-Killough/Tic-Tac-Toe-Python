@@ -25,8 +25,8 @@ def format_board(board):
 
 def play_move(board, player):
     print(f'{player} to play:')
-    row = int(input('Choose a row. ')) - 1
-    col = int(input('Choose a column. ')) - 1
+    row = int(input('Choose a row: ')) - 1
+    col = int(input('Choose a column: ')) - 1
     board[row][col] = player
     print(format_board(board))
 
